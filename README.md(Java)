@@ -4,7 +4,7 @@ I have completed the following 3 tasks:
 
 1. Rule-Based Chatbot  
 2. Tic-Tac-Toe AI (Minimax Algorithm)  
-3. Recommendation System  
+4. Recommendation System  
 
 ---
 
@@ -61,7 +61,7 @@ X |   |
 
 Winner: O
 ```
-# Task 3- Recommendation System
+# Task 4- Recommendation System
 ### Run
 ```bash
 javac RecommendationSystem.java
