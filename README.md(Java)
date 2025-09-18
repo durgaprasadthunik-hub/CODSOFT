@@ -1,0 +1,78 @@
+# CodSoft AI Internship 🚀
+his repository contains my **CodSoft AI Internship Tasks** implemented in **Java**.  
+I have completed the following 3 tasks:  
+
+1. Rule-Based Chatbot  
+2. Tic-Tac-Toe AI (Minimax Algorithm)  
+3. Recommendation System  
+
+---
+
+## Task 1 – Rule-Based Chatbot
+A simple chatbot that replies to user inputs using `if-else` rules.
+
+### Run
+```bash
+javac Chatbot.java
+java Chatbot
+
+Sample OutPut:
+Simple Chatbot (type 'bye' to exit)
+
+You: hi
+Bot: Hello! How can I help you today?
+
+You: how are you
+Bot: I'm just code, but I'm doing great! Thanks for asking.
+
+You: what is your name
+Bot: I am CodSoft Bot 🤖
+
+You: bye
+Bot: Goodbye! Have a nice day 👋
+```
+# Task 2- Tic-Tac-Toe AI(Minimax Algorithm)
+### Run
+```bash
+javac TicTacToeAI.java
+java TicTacToeAI
+
+Sample OutPut:
+You are X, AI is O
+   |   |  
+-----
+   |   |  
+-----
+   |   |  
+
+Enter your move (row col 0-2): 0 0
+X |   |  
+-----
+  | O |  
+-----
+  |   |  
+
+AI plays:
+X |   |  
+-----
+  | O |  
+-----
+  |   | X
+
+Winner: O
+```
+# Task 3- Recommendation System
+### Run
+```bash
+javac RecommendationSystem.java
+java RecommendationSystem
+
+Sample OutPut:
+Enter a movie title: Inception
+Recommended movies similar to Inception:
+- Tenet
+- Interstellar
+- The Prestige
+```
+
+
