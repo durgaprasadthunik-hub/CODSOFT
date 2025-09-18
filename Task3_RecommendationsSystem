@@ -1,0 +1,49 @@
+import java.util.*;
+public class RecommendationSystem {
+    public static void main(String[] args) {
+        Map<String, String> movies = new HashMap<>();
+        movies.put("Inception", "dream thief corporate secrets");
+        movies.put("Interstellar", "space wormhole humanity survival");
+        movies.put("The Dark Knight", "batman joker crime gotham");
+        movies.put("Tenet", "time inversion secret agent prevent war");
+        movies.put("The Prestige", "magicians illusion rivalry");
+
+        try (Scanner sc = new Scanner(System.in)) { 
+            System.out.print("Enter a movie title: ");
+            String input = sc.nextLine().trim();
+            String matchedKey = null;
+            for (String key : movies.keySet()) {
+                if (key.equalsIgnoreCase(input)) {
+                    matchedKey = key;
+                    break;
+                }
+            }
+
+            if (matchedKey == null) {
+                System.out.println("Movie not found in dataset.");
+                return;
+            }
+
+            String[] inputWords = movies.get(matchedKey).toLowerCase().split("\\s+");
+            Map<String, Integer> scoreMap = new HashMap<>();
+
+            for (Map.Entry<String, String> entry : movies.entrySet()) {
+                if (entry.getKey().equals(matchedKey)) continue;
+                int score = 0;
+                String desc = entry.getValue().toLowerCase();
+                for (String word : inputWords) {
+                    if (desc.contains(word)) score++;
+                }
+                scoreMap.put(entry.getKey(), score);
+            }
+            List<Map.Entry<String, Integer>> sorted = new ArrayList<>(scoreMap.entrySet());
+            sorted.sort((a, b) -> b.getValue().compareTo(a.getValue()));
+
+            System.out.println("Recommended movies similar to " + matchedKey + ":");
+            for (int i = 0; i < Math.min(3, sorted.size()); i++) {
+                System.out.println("- " + sorted.get(i).getKey());
+            }
+        }
+    }
+}
+
