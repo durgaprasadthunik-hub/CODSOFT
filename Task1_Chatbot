@@ -1,0 +1,27 @@
+import java.util.Scanner;
+public class Chatbot {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Simple Chatbot (type 'bye' to exit)\n");
+
+        while (true) {
+            System.out.print("You: ");
+            String userInput = sc.nextLine().toLowerCase();
+
+            if (userInput.equals("hi") || userInput.equals("hello") || userInput.equals("hey")) {
+                System.out.println("Bot: Hello! How can I help you today?");
+            } else if (userInput.contains("your name")) {
+                System.out.println("Bot: I am CodSoft Bot");
+            } else if (userInput.contains("how are you")) {
+                System.out.println("Bot: I'm just code, but I'm doing great! Thanks for asking.");
+            } else if (userInput.equals("bye")) {
+                System.out.println("Bot: Goodbye! Have a nice day");
+                break;
+            } else {
+                System.out.println("Bot: Sorry, I don’t understand that.");
+            }
+        }
+        sc.close();
+    }
+}
+
